@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "insatinator"
+version = "0.1.0"
+description = ""
+authors = ["Aravind Reddy V <zerodividedby0@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.22.4"
+h5py = "^3.7.0"
+Pillow = "^9.1.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.3.0"
+mypy = "^0.950"
+pylama = "^8.3.8"
+grip = "^4.6.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
