@@ -3,6 +3,7 @@ import h5py
 import numpy as np
 from skimage.transform import resize
 
+
 def preprocess(path_file: Path):
     (Path("temp_files") / path_file.stem).mkdir(exist_ok=True, parents=True)
     (Path("images") / path_file.stem).mkdir(exist_ok=True, parents=True)
@@ -44,12 +45,14 @@ def preprocess(path_file: Path):
                     arr_variant = resize(arr_variant, (2816, 2805))
 
                 arr_variant = arr_variant.astype(np.uint8)
-                
-                np.save(Path("temp_files") / path_file.stem / f"{band}_{variant}.npy", arr_variant)
+
+                np.save(
+                    Path("temp_files") / path_file.stem / f"{band}_{variant}.npy",
+                    arr_variant,
+                )
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     for child in Path("./raw_data/").iterdir():
         if child.is_file() and child.suffix == ".h5":
             print(child)
