@@ -1,11 +1,8 @@
-images/*
-!images/.gitkeep
-
 raw_data/*
 !raw_data/.gitkeep
 
+images/*
 temp_files/*
-!temp_files/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
